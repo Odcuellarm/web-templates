@@ -1,0 +1,89 @@
+span {
+    display: block;
+}
+
+.banner {
+    text-align: center;
+    background: rgb(12,107,194);
+    background: linear-gradient(90deg, rgba(78, 130, 194, 1) 40%, rgba(255,0,151,0.7) 100%);
+    
+    color: white;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mob-download{
+    display: none;
+}
+
+/*Styles for the filters dropdown navbar*/
+.app-icons{
+    padding: 7px 5px 5px 5px;
+}
+
+.rSelected{
+    background-color: #4F82C2;
+    color: white;
+}
+
+.filter-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filter-listing{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 5px 5px 5px;
+}
+
+.filter-show-hide-map{
+    width: 20%;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.single-line {
+    display: flex;
+    float: left;
+    align-items: center;
+    padding: 0px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 2rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 2em;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.complement h1{
+    background-color: #4F82C2;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}

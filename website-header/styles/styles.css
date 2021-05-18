@@ -1,0 +1,14 @@
+span {
+    display: block;
+}
+
+.banner {
+    text-align: center;
+    background: rgb(12,107,194);
+    background: linear-gradient(90deg, rgba(12,107,194,0.3981967787114846) 3%, rgba(255,0,151,0.6306897759103641) 100%);
+    color: white;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 600;
+
+}

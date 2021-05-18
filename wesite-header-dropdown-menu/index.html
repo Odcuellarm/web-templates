@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="mdl-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css"/>
+    <!-- material components-web -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- ?????Other style sheets -->
+    <link rel="stylesheet" href="assets/css/mapgridsecond.css?1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--????? Start Mixpanel -->
+    <script type="text/javascript" async="" src="//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
+    <!--There's plenty of Link tagas for style and script tags for functionality for the website, those are going to be implemented later in the project.-->
+</head>
+
+<body id="body-div">
+    <header>
+        <div class="top-nav-banner">
+            <span id="topNavBar">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                    <div class="col navbar-collapse ml-auto collapse" id="navbarSupportedContent" style="">
+                        <div class="t_social"> 
+                            <a onclick="socialMediaCicked(this)" href="http://instagram.com/replaylistings" target="_blank">
+                                <img src="https://www.replaylistings.com/assets/images/Instagram Icon.png"></a>
+                            <a onclick="socialMediaCicked(this)" href="http://facebook.com/replaylistingsnyc" target="_blank">
+                                <img src="https://www.replaylistings.com/assets/images/Facebook Icon.png"></a>
+                            <a onclick="socialMediaCicked(this)" href="https://podcasts.apple.com/us/podcast/renting-an-apartment-in-new-york-city/id1481965450" target="_blank">
+                                <img src="https://www.replaylistings.com/assets/images/Apple Podcasts Icon.png"></a>
+                            <a onclick="socialMediaCicked(this)" href="https://twitter.com/replaylistings" target="_blank">
+                                <img src="https://www.replaylistings.com/assets/images/Twitter Icon.png"></a>
+                        </div>
+                    </div>
+                    
+                    
+                    <a class="navbar-brand" href="https://www.replaylistings.com/index.html">
+                        <img src="https://www.replaylistings.com/assets/images/ReplayListingsWeb.png" width="140" alt="">
+                    </a>
+                    
+                    
+                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                   
+                    <!--This div is responsible for the left section of the header-->
+                    <div class="col navbar-collapse mr-auto collapse" id="navbarSupportedContent" style="">
+                        <div class="ml-auto my-2 my-lg-0">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://blog.replaylistings.com/">Blog</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        NYC
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/nyc">Renting In
+                                            NYC</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/nyc/studio-apartments-for-rent/">Studios for Rent in
+                                            NYC</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/nyc/one-bedroom-apartments-for-rent/">One Bedrooms for
+                                            Rent in NYC</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/nyc/two-bedroom-apartments-for-rent/">Two Bedrooms for
+                                            Rent in NYC</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/nyc/luxury-apartments-for-rent/">Luxury Apartments for
+                                            Rent in NYC</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Guides
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/guides/agentguide.html">Agent
+                                            Guides</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/guides/renterguides.html">Renter
+                                            Guides</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/rentersstarterguide">Starter
+                                            Guides</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        About Us
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/press/index.html">Press</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/extraPages/faqs.html">FAQ's</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/privacypolicy.html">Privacy Policy</a>
+                                        <a class="dropdown-item" target="_blank" href="https://www.replaylistings.com/testimonials">Testimonials</a>
+                                    </div>
+                                </li>
+                
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://www.replaylistings.com/partners">Partners</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://www.replaylistings.com/agent/index.html">Agent
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://www.replaylistings.com/renter/index.html">Renter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <style>
+                .t_social {
+                    display: grid !important;
+                    grid-gap: 15%;
+                    justify-content: left;
+                    align-items: center;
+                    grid-template-columns: auto auto auto auto;
+                    padding-left: 20px;
+                }
+            
+                .t_social img {
+                    width: 20px;
+                }
+                </style>
+            </span>
+            <div class="banner">
+                <div>
+                    Rent, Buy or Sell Verified Apartments in New York City
+                </div>
+            </div>
+        </div>
+        
+        <div class="top-nav-banner mob-download">
+            <a target="_blank" onclick="playStoreLinkPressed()" href="https://play.google.com/store/apps/details?id=com.replaylistings.listings">
+                    <img class="app-download-logo" src="assets/images/googlestorerl.png" alt="">
+                </a>
+                <a target="_blank" onclick="itunesLinkPressed()" href="https://apps.apple.com/us/app/replay-listings-nyc-rentals/id1326513996">
+                    <img class="app-download-logo" src="assets/images/applestorerl.png" alt="">
+                </a>
+        </div>
+
+        <!--#######################################################-->
+        <!--#################### Filter Navbar ####################-->
+        <div class="filter-nav">
+            <div class="app-icons">
+                <button id="rentalSelection" type="button" class="btn btn-lg rSelected" onclick="reloadPage('rentals')">Rentals</button>
+                <button id="saleSelecttion" type="button" class="btn btn-lg" onclick="reloadPage('sales')">Sales</button>
+            </div>
+            <div class="filter-listing">
+                <div class="dropdown">
+                    <div class="filter-chip medium-bold-font single-line">
+                        <!-- <span class="material-icons chipIcon">
+                            king_bed
+                        </span> -->
+                        <span id="txtBedSize">Bed</span>
+                        <span class="material-icons chipIcon">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                    <div id="bathFilter" class="dropdown-content">
+                        <a>
+                            <label id="studioBedLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="studio" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="studio" class="mdl-checkbox__input" onclick="onBedSelected(this)">
+                                <span class="mdl-checkbox__label">Studio</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label id="oneBedLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="oneBed" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="oneBed" class="mdl-checkbox__input" onclick="onBedSelected(this)">
+                                <span class="mdl-checkbox__label">1 Bed</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label id="twoBedLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="twoBed" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="twoBed" class="mdl-checkbox__input" onclick="onBedSelected(this)">
+                                <span class="mdl-checkbox__label">2 Bed</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label id="threeBedLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="threeBed" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="threeBed" class="mdl-checkbox__input" onclick="onBedSelected(this)">
+                                <span class="mdl-checkbox__label">3+ Bed</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="dropdown" for="bath">
+                    <div class="filter-chip medium-bold-font single-line">
+                        <!-- <span class="material-icons chipIcon">
+                            bathtub
+                        </span> -->
+                        <span id="txtBathSize">Bath</span>
+                        <span class="material-icons chipIcon">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                    <div id="bathFilter" class="dropdown-content">
+                        <a>
+                            <label id="oneBathLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="oneBath" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="oneBath" class="mdl-checkbox__input" onclick="onBathSelected(this)">
+                                <span class="mdl-checkbox__label">1 Bath</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label id="twoBathLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="twoBath" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="twoBath" class="mdl-checkbox__input" onclick="onBathSelected(this)">
+                                <span class="mdl-checkbox__label">2 Bath</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label id="threeBathLbl" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="threeBath" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="threeBath" class="mdl-checkbox__input" onclick="onBathSelected(this)">
+                                <span class="mdl-checkbox__label">3 Bath</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown" for="price">
+                    <div class="filter-chip medium-bold-font single-line">
+                        <!-- <span class="material-icons chipIcon">
+                            attach_money
+                        </span> -->
+                        <span id="txtPrice">Price</span>
+                        <span class="material-icons chipIcon">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                    <div id="priceFilter" class="dropdown-content">
+                        <a>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded" for="option-0" data-upgraded=",MaterialRadio,MaterialRipple">
+                                <input type="radio" id="option-0" class="mdl-radio__button" name="options" value="1" checked="" onclick="onPriceSelected(this)">
+                                <span class="mdl-radio__label">Any</span>
+                            <span class="mdl-radio__outer-circle"></span><span class="mdl-radio__inner-circle"></span><span class="mdl-radio__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+
+                        </a>
+                        <a>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="option-1" id="priceAlbl" data-upgraded=",MaterialRadio,MaterialRipple">
+                                <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="2" onclick="onPriceSelected(this)">
+                                <span class="mdl-radio__label" id="classA">Below $3,000</span>
+                            <span class="mdl-radio__outer-circle"></span><span class="mdl-radio__inner-circle"></span><span class="mdl-radio__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="option-2" id="priceBlbl" data-upgraded=",MaterialRadio,MaterialRipple">
+                                <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="3" onclick="onPriceSelected(this)">
+                                <span class="mdl-radio__label" id="classB">$3,000 - $4,000</span>
+                            <span class="mdl-radio__outer-circle"></span><span class="mdl-radio__inner-circle"></span><span class="mdl-radio__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="option-3" id="priceClbl" data-upgraded=",MaterialRadio,MaterialRipple">
+                                <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="4" onclick="onPriceSelected(this)">
+                                <span class="mdl-radio__label" id="classC">$4,000 - $5,000</span>
+                            <span class="mdl-radio__outer-circle"></span><span class="mdl-radio__inner-circle"></span><span class="mdl-radio__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="option-4" id="priceDlbl" data-upgraded=",MaterialRadio,MaterialRipple">
+                                <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="5" onclick="onPriceSelected(this)">
+                                <span class="mdl-radio__label" id="classD">Above $5,000</span>
+                            <span class="mdl-radio__outer-circle"></span><span class="mdl-radio__inner-circle"></span><span class="mdl-radio__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown" for="amenities">
+                    <div class="filter-chip medium-bold-font single-line">
+                        <!-- <span class="material-icons chipIcon">
+                            room_preferences
+                        </span> -->
+                        <span id="txtAmenities">Amenities</span>
+                        <span class="material-icons chipIcon">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                    <div id="amenetiesFilter" class="dropdown-content mob-padding">
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="roofDeck" id="roofDecklbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="roofDeck" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Roof Deck</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="convertible" id="convertiblelbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="convertible" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Convertible</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="elevator" id="elevatorlbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="elevator" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Elevator</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="gym" id="gymlbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="gym" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Gym</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="petFriendly" id="petFriendlylbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="petFriendly" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Pet Friendly</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="dishwasher" id="dishwasherlbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="dishwasher" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Dishwasher</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="laundry" id="laundrylbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="laundry" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Laundry</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="balcony" id="balconylbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="balcony" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Balcony</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                        <a>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="doorman" id="doormanlbl" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                <input type="checkbox" id="doorman" class="mdl-checkbox__input" onclick="onAmenitiesSelected(this)">
+                                <span class="mdl-checkbox__label">Doorman</span>
+                            <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="filter-show-hide-map">
+
+            </div>
+        </div>
+
+        <div class="complement">
+            <h1>Add more content Here</h1>
+        </div>
+
+
+    </header>
+    
+    <!--Bootstrap4 scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Material web-components scripts-->
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+</html>
